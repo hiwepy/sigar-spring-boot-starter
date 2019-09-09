@@ -503,11 +503,11 @@
 			<scope>runtime</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.github.vindell/metrics-sigar2 -->
-		<dependency>
+		<!-- <dependency>
 		    <groupId>com.github.vindell</groupId>
 			<artifactId>metrics-sigar2</artifactId>
 		    <scope>runtime</scope>
-		</dependency>
+		</dependency> -->
 		
 		<!-- https://mvnrepository.com/artifact/io.kamon/sigar-loader -->
 		<!-- <dependency>
