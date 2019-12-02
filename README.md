@@ -1,4 +1,4 @@
-# spring-boot-starter-sigar
+# sigar-spring-boot-starter
 
 基于Sigar实现的系统层级的监控组件
 
@@ -7,7 +7,7 @@
 ``` xml
 <dependency>
 	<groupId>com.github.vindell</groupId>
-	<artifactId>spring-boot-starter-sigar</artifactId>
+	<artifactId>sigar-spring-boot-starter</artifactId>
 	<version>${project.version}</version>
 </dependency>
 ```
