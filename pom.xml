@@ -10,12 +10,12 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	
-	<groupId>com.github.vindell</groupId>
+	<groupId>com.github.hiwepy</groupId>
 	<artifactId>sigar-spring-boot-starter</artifactId>
 	<description>Spring Boot Starter For OS-level monitoring Whith Metrics + Hyperic Sigar</description>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>${project.groupId}:${project.artifactId}</name>
-	<url>https://github.com/vindell/${project.artifactId}</url>
+	<url>https://github.com/hiwepy/${project.artifactId}</url>
 	<packaging>jar</packaging>
 
 	<licenses>
@@ -26,15 +26,15 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:https:github.com/vindell/${project.artifactId}.git</connection>
-		<developerConnection>scm:git:https:github.com/vindell/${project.artifactId}.git</developerConnection>
-		<url>https:github.com/vindell/${project.artifactId}</url>
+		<connection>scm:git:https:github.com/hiwepy/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:https:github.com/hiwepy/${project.artifactId}.git</developerConnection>
+		<url>https:github.com/hiwepy/${project.artifactId}</url>
 		<tag>${project.artifactId}</tag>
 	</scm>
 
 	<developers>
 		<developer>
-			<name>vindell</name>
+			<name>wandl</name>
 			<email>hnxyhcwdl1003@163.com</email>
 			<roles>
 				<role>developer</role>
@@ -374,7 +374,7 @@
 		<maven-nexus-staging-plugin.version>1.6.8</maven-nexus-staging-plugin.version>
 		<metrics.version>4.0.5</metrics.version>
 		<sigar.version>1.6.5.132-6</sigar.version><!-- 1.6.4，1.6.5.132-6 -->
-		<sigar-native.version>1.0.2.RELEASE</sigar-native.version>
+		<sigar-native.version>1.0.3-SNAPSHOT</sigar-native.version>
 		<sigar-metrics.version>0.2.2</sigar-metrics.version>
 	</properties>
 	
@@ -420,15 +420,15 @@
 				<artifactId>sigar</artifactId>
 				<version>${sigar.version}</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/com.github.vindell/sigar-native -->
+			<!-- https://mvnrepository.com/artifact/com.github.hiwepy/sigar-native -->
 			<dependency>
-				<groupId>com.github.vindell</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>sigar-native</artifactId>
 				<version>${sigar-native.version}</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/com.github.vindell/metrics-sigar2 -->
+			<!-- https://mvnrepository.com/artifact/com.github.hiwepy/metrics-sigar2 -->
 			<dependency>
-			    <groupId>com.github.vindell</groupId>
+			    <groupId>com.github.hiwepy</groupId>
 				<artifactId>metrics-sigar2</artifactId>
 				<version>1.0.0-SNAPSHOT</version>
 			</dependency>
@@ -495,14 +495,14 @@
 			<groupId>org.hyperic</groupId>
 			<artifactId>sigar</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.github.vindell/sigar-native -->
+		<!-- https://mvnrepository.com/artifact/com.github.hiwepy/sigar-native -->
 		<dependency>
-			<groupId>com.github.vindell</groupId>
+			<groupId>com.github.hiwepy</groupId>
 			<artifactId>sigar-native</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.github.vindell/metrics-sigar2 -->
+		<!-- https://mvnrepository.com/artifact/com.github.hiwepy/metrics-sigar2 -->
 		<!-- <dependency>
-		    <groupId>com.github.vindell</groupId>
+		    <groupId>com.github.hiwepy</groupId>
 			<artifactId>metrics-sigar2</artifactId>
 		    <scope>runtime</scope>
 		</dependency> -->
