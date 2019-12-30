@@ -6,7 +6,7 @@
 
 ``` xml
 <dependency>
-	<groupId>com.github.vindell</groupId>
+	<groupId>com.github.hiwepy</groupId>
 	<artifactId>sigar-spring-boot-starter</artifactId>
 	<version>${project.version}</version>
 </dependency>
