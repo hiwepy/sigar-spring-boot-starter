@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.1.RELEASE</version>
+		<version>2.2.2.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	
@@ -374,8 +374,8 @@
 		<maven-nexus-staging-plugin.version>1.6.8</maven-nexus-staging-plugin.version>
 		<metrics.version>4.0.5</metrics.version>
 		<sigar.version>1.6.5.132-6</sigar.version><!-- 1.6.4，1.6.5.132-6 -->
-		<sigar-native.version>1.0.3-SNAPSHOT</sigar-native.version>
-		<sigar-metrics.version>0.2.2</sigar-metrics.version>
+		<sigar-native.version>1.0.3.RELEASE</sigar-native.version>
+		<sigar-metrics.version>1.0.0.RELEASE</sigar-metrics.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -430,7 +430,7 @@
 			<dependency>
 			    <groupId>com.github.hiwepy</groupId>
 				<artifactId>metrics-sigar2</artifactId>
-				<version>1.0.0-SNAPSHOT</version>
+				<version>${sigar-metrics.version}</version>
 			</dependency>
 			
 		</dependencies>
@@ -501,11 +501,10 @@
 			<artifactId>sigar-native</artifactId>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.github.hiwepy/metrics-sigar2 -->
-		<!-- <dependency>
+		<dependency>
 		    <groupId>com.github.hiwepy</groupId>
 			<artifactId>metrics-sigar2</artifactId>
-		    <scope>runtime</scope>
-		</dependency> -->
+		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/io.kamon/sigar-loader -->
 		<!-- <dependency>
