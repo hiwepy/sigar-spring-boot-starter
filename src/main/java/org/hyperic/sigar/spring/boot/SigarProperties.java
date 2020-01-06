@@ -21,7 +21,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(SigarProperties.PREFIX)
 public class SigarProperties{
 
-	public static final String PREFIX = "shiro.sentinel";
+	public static final String PREFIX = "sigar";
 
 	private boolean enabled = false;
 
