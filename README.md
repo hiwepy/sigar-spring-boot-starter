@@ -8,6 +8,6 @@
 <dependency>
 	<groupId>com.github.hiwepy</groupId>
 	<artifactId>sigar-spring-boot-starter</artifactId>
-	<version>2.0.0.RELEASE</version>
+	<version>${project.version}</version>
 </dependency>
 ```
