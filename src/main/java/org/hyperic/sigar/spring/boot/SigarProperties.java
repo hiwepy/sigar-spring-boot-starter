@@ -23,14 +23,14 @@ public class SigarProperties{
 
 	public static final String PREFIX = "sigar";
 
-	private boolean enabled = false;
+	private String metric = "sigar";
 
-	public boolean isEnabled() {
-		return enabled;
+	public void setMetric(String metric) {
+		this.metric = metric;
 	}
 
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
+	public String getMetric() {
+		return metric;
 	}
-	
+
 }
