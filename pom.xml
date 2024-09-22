@@ -6,14 +6,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.0.RELEASE</version>
+		<version>2.7.0</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<groupId>com.github.hiwepy</groupId>
 	<artifactId>sigar-spring-boot-starter</artifactId>
 	<description>Spring Boot Starter For OS-level monitoring Whith Metrics + Hyperic Sigar</description>
-	<version>2.7.x.20240823.RELEASE</version>
+	<version>2.7.x.20240824.RELEASE</version>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<url>https://github.com/hiwepy/${project.artifactId}</url>
 	<packaging>jar</packaging>
@@ -366,7 +366,6 @@
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
 		<maven-nexus-staging-plugin.version>1.6.8</maven-nexus-staging-plugin.version>
-		<metrics.version>4.0.5</metrics.version>
 		<sigar.version>1.6.5.132-6</sigar.version><!-- 1.6.4，1.6.5.132-6 -->
 		<sigar-native.version>1.0.3.RELEASE</sigar-native.version>
 		<sigar-metrics.version>1.0.0.RELEASE</sigar-metrics.version>
@@ -397,12 +396,6 @@
 				<version>${commons-lang3.version}</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/io.dropwizard.metrics/metrics-core -->
-			<dependency>
-				<groupId>io.dropwizard.metrics</groupId>
-				<artifactId>metrics-core</artifactId>
-				<version>${metrics.version}</version>
-			</dependency>
 			<!-- https://mvnrepository.com/artifact/org.hyperic/sigar -->
 			<dependency>
 				<groupId>org.hyperic</groupId>
