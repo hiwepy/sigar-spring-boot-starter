@@ -9,7 +9,7 @@
 		<relativePath /> 
 	</parent>
 
-	<groupId>com.github.hiwepy</groupId>
+	<groupId>io.github.hiwepy</groupId>
 	<artifactId>sigar-spring-boot-starter</artifactId>
 	<description>Spring Boot Starter For OS-level monitoring Whith Metrics + Hyperic Sigar</description>
 	<version>4.0.x.20251227-SNAPSHOT</version>
@@ -406,13 +406,13 @@
 			</dependency>
 			
 			<dependency>
-				<groupId>com.github.hiwepy</groupId>
+				<groupId>io.github.hiwepy</groupId>
 				<artifactId>sigar-native</artifactId>
 				<version>${sigar-native.version}</version>
 			</dependency>
 			
 			<dependency>
-			    <groupId>com.github.hiwepy</groupId>
+			    <groupId>io.github.hiwepy</groupId>
 				<artifactId>metrics-sigar2</artifactId>
 				<version>${sigar-metrics.version}</version>
 			</dependency>
@@ -481,12 +481,12 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>com.github.hiwepy</groupId>
+			<groupId>io.github.hiwepy</groupId>
 			<artifactId>sigar-native</artifactId>
 		</dependency>
 		
 		<dependency>
-		    <groupId>com.github.hiwepy</groupId>
+		    <groupId>io.github.hiwepy</groupId>
 			<artifactId>metrics-sigar2</artifactId>
 		</dependency>
 
