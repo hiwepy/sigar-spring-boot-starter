@@ -490,6 +490,7 @@
 		<dependency>
 			<groupId>io.prometheus</groupId>
 			<artifactId>prometheus-metrics-core</artifactId>
+            <version>1.3.6</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.hyperic/sigar -->
 		<dependency>
