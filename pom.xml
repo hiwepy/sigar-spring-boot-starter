@@ -421,13 +421,13 @@
 				<artifactId>sigar</artifactId>
 				<version>${sigar.version}</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/com.github.hiwepy/sigar-native -->
+			<!-- https://mvnrepository.com/artifact/io.github.hiwepy/sigar-native -->
 			<dependency>
 				<groupId>io.github.hiwepy</groupId>
 				<artifactId>sigar-native</artifactId>
 				<version>${sigar-native.version}</version>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/com.github.hiwepy/metrics-sigar2 -->
+			<!-- https://mvnrepository.com/artifact/io.github.hiwepy/metrics-sigar2 -->
 			<dependency>
 			    <groupId>io.github.hiwepy</groupId>
 				<artifactId>metrics-sigar2</artifactId>
@@ -497,12 +497,12 @@
 			<groupId>org.hyperic</groupId>
 			<artifactId>sigar</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.github.hiwepy/sigar-native -->
+		<!-- https://mvnrepository.com/artifact/io.github.hiwepy/sigar-native -->
 		<dependency>
 			<groupId>io.github.hiwepy</groupId>
 			<artifactId>sigar-native</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.github.hiwepy/metrics-sigar2 -->
+		<!-- https://mvnrepository.com/artifact/io.github.hiwepy/metrics-sigar2 -->
 		<dependency>
 		    <groupId>io.github.hiwepy</groupId>
 			<artifactId>metrics-sigar2</artifactId>
