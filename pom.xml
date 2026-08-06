@@ -418,6 +418,11 @@
         <sigar.version>1.6.5.132-6</sigar.version><!-- 1.6.4，1.6.5.132-6 -->
         <sigar-native.version>1.0.3.RELEASE</sigar-native.version>
         <sigar-metrics.version>1.0.0.RELEASE</sigar-metrics.version>
+                <dropwizard-metrics.version>4.2.39</dropwizard-metrics.version>
+                <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+                <metrics-sigar.version>0.2.2</metrics-sigar.version>
+                <sigar-loader.version>1.6.6</sigar-loader.version>
+                <slf4j.version>2.0.18</slf4j.version>
     </properties>
 
     <dependencyManagement>
@@ -466,7 +471,29 @@
                 <version>${sigar-metrics.version}</version>
             </dependency>
 
-        </dependencies>
+                <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servlet-api.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.dropwizard.metrics</groupId>
+            <artifactId>metrics-core</artifactId>
+            <version>${dropwizard-metrics.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.kamon</groupId>
+            <artifactId>sigar-loader</artifactId>
+            <version>${sigar-loader.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.cb372</groupId>
+            <artifactId>metrics-sigar</artifactId>
+            <version>${metrics-sigar.version}</version>
+        </dependency>
+</dependencies>
     </dependencyManagement>
 
     <dependencies>
@@ -476,7 +503,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version>
+            <version>${javax.servlet-api.version}</version>
             <optional>true</optional>
         </dependency>
 
@@ -515,7 +542,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>2.0.13</version>
+            <version>${slf4j.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
         <dependency>
@@ -526,7 +553,7 @@
         <dependency>
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
-            <version>4.2.25</version>
+            <version>${dropwizard-metrics.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.hyperic/sigar -->
         <dependency>
@@ -548,14 +575,14 @@
         <!-- <dependency>
             <groupId>io.kamon</groupId>
             <artifactId>sigar-loader</artifactId>
-            <version>1.6.6</version>
+            <version>${sigar-loader.version}</version>
             <scope>runtime</scope>
         </dependency> -->
         <!-- https://mvnrepository.com/artifact/com.github.cb372/metrics-sigar -->
         <!-- <dependency>
             <groupId>com.github.cb372</groupId>
             <artifactId>metrics-sigar</artifactId>
-            <version>0.2.2</version>
+            <version>${metrics-sigar.version}</version>
         </dependency> -->
 
         <!-- Core starter, including auto-configuration support, logging and YAML -->
