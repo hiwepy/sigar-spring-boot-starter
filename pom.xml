@@ -13,7 +13,7 @@
     <groupId>io.github.easy4j</groupId>
     <artifactId>sigar-spring-boot-starter</artifactId>
     <description>Spring Boot Starter For OS-level monitoring Whith Metrics + Hyperic Sigar</description>
-    <version>2.7.x.20240824.RELEASE</version>
+    <version>2.7.x.20260630-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/easy-4-java/${project.artifactId}</url>
     <packaging>jar</packaging>
@@ -404,6 +404,7 @@
     </profiles>
 
     <properties>
+        <java.version>1.8</java.version>
 
         <!-- Dependency versions -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -416,8 +417,8 @@
         <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
         <maven-nexus-staging-plugin.version>1.6.8</maven-nexus-staging-plugin.version>
         <sigar.version>1.6.5.132-6</sigar.version><!-- 1.6.4，1.6.5.132-6 -->
-        <sigar-native.version>1.0.3.RELEASE</sigar-native.version>
-        <sigar-metrics.version>1.0.0.RELEASE</sigar-metrics.version>
+        <sigar-native.version>1.0.x.20260630-SNAPSHOT</sigar-native.version>
+        <sigar-metrics.version>1.0.x.20260630-SNAPSHOT</sigar-metrics.version>
                 <dropwizard-metrics.version>4.2.39</dropwizard-metrics.version>
                 <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
                 <metrics-sigar.version>0.2.2</metrics-sigar.version>
