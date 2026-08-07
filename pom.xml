@@ -13,7 +13,7 @@
     <groupId>io.github.easy4j</groupId>
     <artifactId>sigar-spring-boot-starter</artifactId>
     <description>Spring Boot Starter For OS-level monitoring Whith Metrics + Hyperic Sigar</description>
-    <version>3.4.x.20260527-SNAPSHOT</version>
+    <version>3.4.x.20260630-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/easy-4-java/${project.artifactId}</url>
     <packaging>jar</packaging>
@@ -435,8 +435,8 @@
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
         <!-- Dependency versions -->
         <sigar.version>1.6.5.132-6</sigar.version><!-- 1.6.4，1.6.5.132-6 -->
-        <sigar-native.version>1.0.3.RELEASE</sigar-native.version>
-        <sigar-metrics.version>1.0.0.RELEASE</sigar-metrics.version>
+        <sigar-native.version>2.0.x.20260630-SNAPSHOT</sigar-native.version>
+        <sigar-metrics.version>2.0.x.20260630-SNAPSHOT</sigar-metrics.version>
                 <metrics-sigar.version>0.2.2</metrics-sigar.version>
                 <prometheus-metrics-core.version>1.3.6</prometheus-metrics-core.version>
                 <sigar-loader.version>1.6.6</sigar-loader.version>
