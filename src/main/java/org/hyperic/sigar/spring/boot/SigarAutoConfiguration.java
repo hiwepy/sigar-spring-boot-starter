@@ -14,6 +14,7 @@ import kamon.sigar.SigarProvisioner;
 @Configuration
 @ConditionalOnClass({org.hyperic.sigar.Sigar.class})
 @EnableConfigurationProperties(SigarProperties.class)
+/**\n * Auto-configuration for SigarAutoConfiguration.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
 public class SigarAutoConfiguration{
 
 	@PostConstruct
