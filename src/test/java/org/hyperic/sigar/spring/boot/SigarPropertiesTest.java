@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Unit tests for {{ @link SigarProperties }}.
+ * Unit tests for {@link SigarProperties}.
  *
  * <p>Verifies default values, getters/setters and POJO contract.</p>
  *
@@ -30,6 +30,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 @DisplayName("SigarProperties Tests")
 class SigarPropertiesTest {
+
     @Test
     @DisplayName("Default constructor creates non-null instance")
     void testDefaultInstance() {
@@ -38,24 +39,39 @@ class SigarPropertiesTest {
     }
 
     @Test
-    @DisplayName("Field 'metric' can be set and read")
-    void testMetricField() {
+    @DisplayName("Default metric value is 'sigar'")
+    void testDefaultMetricValue() {
         SigarProperties props = new SigarProperties();
-        // Use reflection to set private field (covers all fields including those without setters)
-        try {
-            java.lang.reflect.Field f = SigarProperties.class.getDeclaredField("metric");
-            f.setAccessible(true);
-            f.set(props, "test");
-            Object value = f.get(props);
-            assertThat(value).isNotNull();
-        } catch (Exception e) {
-            // Field may have a more complex type; skip silently
-        }
+        assertThat(props.getMetric()).isEqualTo("sigar");
+    }
+
+    @Test
+    @DisplayName("Field 'metric' can be set and read via getter/setter")
+    void testMetricFieldGetterSetter() {
+        SigarProperties props = new SigarProperties();
+        props.setMetric("custom-metric");
+        assertThat(props.getMetric()).isEqualTo("custom-metric");
     }
 
     @Test
     @DisplayName("Public constant 'PREFIX' has expected value")
     void testPREFIXConstant() {
         assertThat(SigarProperties.PREFIX).isEqualTo("sigar");
+    }
+
+    @Test
+    @DisplayName("Setting metric to null works")
+    void testMetricNull() {
+        SigarProperties props = new SigarProperties();
+        props.setMetric(null);
+        assertThat(props.getMetric()).isNull();
+    }
+
+    @Test
+    @DisplayName("Setting metric to empty string works")
+    void testMetricEmpty() {
+        SigarProperties props = new SigarProperties();
+        props.setMetric("");
+        assertThat(props.getMetric()).isEmpty();
     }
 }

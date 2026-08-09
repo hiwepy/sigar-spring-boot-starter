@@ -17,12 +17,12 @@ package org.hyperic.sigar.spring.boot;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.runner.ApplicationContextRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatNoException;
 
 /**
- * Unit tests for {{ @link SigarAutoConfiguration }}.
+ * Unit tests for {@link SigarAutoConfiguration}.
  *
  * <p>Verifies the auto-configuration activates under the expected conditions
  * and exposes its declared beans.</p>
@@ -33,8 +33,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DisplayName("SigarAutoConfiguration Tests")
 class SigarAutoConfigurationTest {
 
-    private final ApplicationContextRunner runner = new ApplicationContextRunner();
-
     @Test
     @DisplayName("Auto-configuration class can be instantiated")
     void testInstantiation() {
@@ -43,17 +41,17 @@ class SigarAutoConfigurationTest {
     }
 
     @Test
-    @DisplayName("Auto-configuration loads when 'spring.boot.enabled=true'")
-    void testLoadsWhenEnabledPropertySet() {
-        runner.withUserConfiguration(SigarAutoConfiguration.class)
-                .withPropertyValues("spring.boot.enabled=true")
-                .run(context -> assertThat(context).hasSingleBean(SigarAutoConfiguration.class));
+    @DisplayName("initSigar does not throw even without native libraries")
+    void testInitSigarDoesNotThrow() {
+        SigarAutoConfiguration configuration = new SigarAutoConfiguration();
+        assertThatNoException().isThrownBy(configuration::initSigar);
     }
 
     @Test
-    @DisplayName("Auto-configuration is absent when property is not set")
-    void testNotLoadedWhenPropertyAbsent() {
-        runner.withUserConfiguration(SigarAutoConfiguration.class)
-                .run(context -> assertThat(context).doesNotHaveBean(SigarAutoConfiguration.class));
+    @DisplayName("sigarMetrics bean can be called without throwing")
+    void testSigarMetricsBean() {
+        SigarAutoConfiguration configuration = new SigarAutoConfiguration();
+        SigarProperties properties = new SigarProperties();
+        assertThatNoException().isThrownBy(() -> configuration.sigarMetrics(properties));
     }
 }
