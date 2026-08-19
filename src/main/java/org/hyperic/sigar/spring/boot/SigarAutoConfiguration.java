@@ -28,6 +28,9 @@ public class SigarAutoConfiguration {
 
 	@PostConstruct
 	@lombok.Generated
+    /**
+     * <p>Initializes the sigar.</p>
+     */
 	public void initSigar() {
 		log.debug("Provisioning Sigar native libraries");
 		try {
@@ -41,6 +44,11 @@ public class SigarAutoConfiguration {
 	@Bean
 	@ConditionalOnClass(com.codahale.metrics.MetricRegistry.class)
 	@lombok.Generated
+    /**
+     * <p>Sigar metrics.</p>
+     * @param properties
+     * @return the sigar metrics
+     */
 	public SigarMetrics sigarMetrics(SigarProperties properties) {
 		log.debug("Initializing SigarMetrics with metric registry '{}'", properties.getMetric());
 		try {

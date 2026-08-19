@@ -26,10 +26,18 @@ public class SigarProperties{
 
 	private String metric = "sigar";
 
+    /**
+     * <p>Sets the metric.</p>
+     * @param metric
+     */
 	public void setMetric(String metric) {
 		this.metric = metric;
 	}
 
+    /**
+     * <p>Returns the metric.</p>
+     * @return the get metric
+     */
 	public String getMetric() {
 		return metric;
 	}
